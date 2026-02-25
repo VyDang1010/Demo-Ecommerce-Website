@@ -1,0 +1,52 @@
+/* CSS những cấu hình chung */
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    /* Mặc định font-size: 16px */
+    /* font-size: 100%; */
+    /* Với trường hợp muốn nâng font-size sd đơn vị rem cho những thẻ css khác thì dùng con số 10px */
+    font-size: 62.5%;
+    /* Khoảng cách giữa các dòng, 1.6 rem ở đây bằng 16 px */
+    line-height: 1.6 rem;
+    /* sans-serif là chủng chữ không có chân */
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Reponsive là cách mà màn hình máy tính, laptop, tablet hay iphone mỗi lần co lại một kích thước
+    thì nó sẽ tự động thu nhỏ lại như thế */
+.grid {
+    /* Kích thước mà lớn hơn 1200 thì giữ nguyên 1200, nhỏ hơn thì mặc định bằng 100% toàn màn */
+    width: 1200px;
+    max-width: 100%;
+    /* Căn giữa khối này khi nằm trong khối khác */
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    /* Tổng các phần tử con mà vượt quá grid này thì tự động xuống dòng */
+    flex-wrap: wrap; 
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
