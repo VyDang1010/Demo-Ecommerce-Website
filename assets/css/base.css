@@ -2,7 +2,7 @@
 :root {
     --primary-color: #ee4d2d;
     --white-color: #fff;
-    --black-color: #000;
+    --black-color: #000000;
     --text-color: #333;
 }
 
@@ -50,4 +50,35 @@ html {
     to {
         opacity: 1;
     }
+}
+
+/* Modal */
+/* Cho chiếm lấy toàn bộ màn hình  */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+    /* Đây là con số tạo box mặc định, có thể bỏ đi sau tự động điền chữ vào là có  */
+    width: 450px;
+    height: 450px;
+    background-color: var(--white-color);
+    margin: auto;
+    position: relative;
+    /* Ai có thuộc tính z-index to hơn thì lên tầng layout trước  
+    Hoặc không để một cái z-index là chắc chắn nó nằm trên*/
+    z-index: 1;
+    border-radius: 5px;
 }
