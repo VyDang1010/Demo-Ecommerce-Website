@@ -4,6 +4,7 @@
     --white-color: #fff;
     --black-color: #000000;
     --text-color: #333;
+    --border-color: #dbdbdb;
 }
 
 * {
@@ -72,13 +73,48 @@ html {
 
 .modal__body {
     /* Đây là con số tạo box mặc định, có thể bỏ đi sau tự động điền chữ vào là có  */
-    width: 450px;
-    height: 450px;
-    background-color: var(--white-color);
+    /* width: 450px; */
+    /* height: 450px; */
     margin: auto;
     position: relative;
     /* Ai có thuộc tính z-index to hơn thì lên tầng layout trước  
     Hoặc không để một cái z-index là chắc chắn nó nằm trên*/
     z-index: 1;
-    border-radius: 5px;
+}
+
+/* Button  */
+.btn {
+    min-width: 142px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn--size-s {
+    height: 32px;
+    font-size: 1.2rem;
+    padding: 0 8px;
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn.btn--disabled {
+    color: #949494;
+    cursor: default;
+    /* Giảm độ sáng  */
+    /* filter: brightness(80%); */
+    background-color: #c3c3c3;
 }
