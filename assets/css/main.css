@@ -1,6 +1,6 @@
 /* CSS những thành phần riêng */
 .header {
-    height: 120px;
+    height: var(--header-height);
     background-image: linear-gradient(0, #fe6433, #f53e2d);
 }
 
@@ -13,7 +13,7 @@
 .header__navbar-list {
     list-style: none;
     padding-left: 0;
-    margin-top: 4px;
+    margin: 4px 0 0 0;
 }
 
 .header__navbar-item {
@@ -259,6 +259,40 @@
     /* margin: auto;  */
     font-size: 1.4rem;
     text-align: center;
+}
+
+/* Header with search */
+.header-with-search {
+    height: var(--header-with-search-height);
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 210px;
+}
+
+.header__logo-img {
+    width: 190px;
+    margin-left: 6px;
+}
+
+.header__search {
+    background-color: var(--white-color);
+    height: 40px;
+    /* Chiếm hết chiều ngang  */
+    flex: 1;
+    border-radius: 2px;
+}
+
+.header__cart {
+    width: 150px;
+    text-align: center;
+}
+
+.header__cart-icon {
+    color: var(--white-color);
+    font-size: 2.4rem;
 }
 
 /* Modal Layout */
