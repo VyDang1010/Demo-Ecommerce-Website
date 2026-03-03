@@ -1,7 +1,7 @@
 /* CSS những thành phần riêng */
 .header {
     height: var(--header-height);
-    background-image: linear-gradient(0, #fe6433, #f53e2d);
+    background-image: linear-gradient(0, #f77676, #f13c3c);
 }
 
 .header__navbar {
@@ -61,7 +61,7 @@
     content: "";
     display: block;
     position: absolute;
-    border-left: 1px solid #FB9086;
+    border-left: 1px solid #fa8484;
     height: 14px;
     /* Bởi vì margin giữa hai item là 8 -> 16px */
     right: -9px;
@@ -277,12 +277,138 @@
     margin-left: 6px;
 }
 
+/* Header Search  */
 .header__search {
     background-color: var(--white-color);
     height: 40px;
     /* Chiếm hết chiều ngang  */
     flex: 1;
-    border-radius: 2px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.header__search-input {
+    height: 100%;
+    flex: 1;
+    border: none;
+    padding: 0 16px;
+    font-size: 1.4rem;
+    outline: none;
+    color: var(--text-color);
+    border-radius: 3px;
+}
+
+.header__search-select-seperate {
+    border-left: 1px solid #D3D3D3;
+    height: 20px;
+    padding-right: 16px;
+}
+
+.header__search-select {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__search-select-label,
+.header__search-select-icon {
+    font-size: 1.4rem;
+}
+
+.header__search-select-label {
+    font-weight:450;
+    color: var(--text-color);
+}
+
+.header__search-select-icon {
+    color: #4a4a4a;
+    margin: 0 15px 0 5px;
+}
+
+.header__search-select:hover .header__search-option {
+    display: block;
+}
+
+.header__search-option {
+    position: absolute;
+    right: 0;
+    top: 90%;
+    width: 130px;
+    list-style: none;
+    /* Số đầu tiên trong đổ bóng là chiều dọc x, 0 là trên xuống
+    số thứ hai là chiều ngang y từ trái sang với số 0 
+    giá trị thứ 3 là độ blur của bóng đổ*/
+    box-shadow: 0 1px 3px #ccc;
+    padding-left: 0;
+    border-radius: 3px;
+    display: none;
+    animation: fadeIn ease-in 0.2s;
+}
+
+.header__search-option::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    /* background-color: red; */
+}
+
+.header__search-option-item {
+    background-color: var(--white-color);
+    /* border-radius: 3px; */
+    padding: 8px 8px;
+}
+
+.header__search-option-item:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.header__search-option-item:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.header__search-option-item:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.header__search-option-item span {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+.header__search-option-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.header__search-btn {
+    background-color: var(--primary-color);
+    border: none;
+    height: 34px;
+    width: 70px;
+    border-radius: 3px;
+    margin-right: 3px;
+    cursor: pointer;
+    outline: none;
+}
+
+.header__search-btn:hover {
+    background-color: #f28a8a;
+}
+
+.header__search-btn-icon {
+    font-size: 1.5rem;
+    color: var(--white-color);
 }
 
 .header__cart {
