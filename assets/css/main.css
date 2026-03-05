@@ -14,6 +14,7 @@
     list-style: none;
     padding-left: 0;
     margin: 4px 0 0 0;
+    display: flex;
 }
 
 .header__navbar-item {
@@ -42,7 +43,7 @@
     /* Bỏ dấu gạch chân của a, mặc định đang để là underline */
     text-decoration: none;
     font-weight: 300;
-    display: inline-flex;
+    display: flex;
     align-items: center;
 }
 
@@ -79,6 +80,25 @@
 .header__navbar-title--no-pointer {
     cursor: text;
     color: var(--white-color);
+}
+
+/* Username  */
+.header__navbar-user {
+    display: flex;
+    justify-items: center;
+}
+
+.header__navbar-user-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #e93f3f;
+}
+
+.header__navbar-user-name {
+    margin-left: 7px;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 
 /* Header Qr */
