@@ -49,7 +49,8 @@
 
 .header__navbar-item:hover,
 .header__navbar-icon-link:hover,
-.header__navbar-item-link:hover {
+.header__navbar-item-link:hover,
+.header__navbar-user:hover {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -86,19 +87,90 @@
 .header__navbar-user {
     display: flex;
     justify-items: center;
+    position: relative;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
 }
 
 .header__navbar-user-avatar {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 1px solid #e93f3f;
+    border: 1px solid #f16a6a;
 }
 
 .header__navbar-user-name {
     margin-left: 7px;
     font-size: 1.4rem;
     font-weight: 400;
+}
+
+.header__navbar-user-menu {
+    position: absolute;
+    top: 130%;
+    left: -65px;
+    padding: 8px 0;
+    background-color: var(--white-color);
+    width: 170px;
+    border-radius: 3px;
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotifyGrowth ease-in 0.15s;
+    /* Thông báo cho trình duyệt sự thay đổi 
+    của opacity và transform */
+    will-change: opacity, transform;
+    display: none;
+    z-index: 100;
+}
+
+.header__navbar-user-menu::before {
+    content: "";
+    position: absolute;
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    top: -32px;
+    right: 5px;
+    z-index: 0;
+}
+
+.header__navbar-user-menu::after {
+    content: "";
+    position: absolute;
+    /* background-color: red; */
+    height: 17px;
+    width: 170px;
+    top: -10%;
+}
+
+.header__navbar-user-item {
+    list-style: none;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 7px;
+}
+
+.header__navbar-user-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--primary-color);
+}
+
+/* Khi hover vào item thì đổi màu chữ của a bên trong */
+.header__navbar-user-item:hover a {
+    color: var(--primary-color);
+}
+
+.header__navbar-user-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.header__navbar-user-item--bold a {
+    color: var(--primary-color);
+    font-weight: 500;
 }
 
 /* Header Qr */
