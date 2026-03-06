@@ -47,6 +47,10 @@
     align-items: center;
 }
 
+.header__navbar-icon-link:nth-child(2) {
+    margin-left: 3px;
+}
+
 .header__navbar-item:hover,
 .header__navbar-icon-link:hover,
 .header__navbar-item-link:hover,
@@ -101,8 +105,12 @@
     border: 1px solid #f16a6a;
 }
 
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .header__navbar-user-name {
-    margin-left: 7px;
+    margin-left: 3px;
     font-size: 1.4rem;
     font-weight: 400;
 }
@@ -231,13 +239,13 @@
     cursor: default;
     /* Định được cái tâm xem nó sẽ dần phóng to hiện ra từ đâu 
     Mặc định đang ở center, cần chỉnh nó chạy ra từ nút tbao */
-    transform-origin: calc(100% - 20px) top;
+    transform-origin: calc(100% - 32px) top;
     animation: headerNotifyGrowth ease-in 0.15s;
     /* Thông báo cho trình duyệt sự thay đổi 
     của opacity và transform */
     will-change: opacity, transform;
     display: none;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .header__notify::before {
