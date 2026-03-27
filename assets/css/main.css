@@ -1080,3 +1080,118 @@ search-history phía sau thẻ input */
 }
 
 /* Product Item  */
+.home-product-item {
+    background-color: var(--white-color);
+    margin-top: 10px;
+}
+
+.home-product-item__img {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-product-item__name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    /* Height from the font line  */
+    line-height: 1.8rem;
+    height: 3.6rem;
+    margin: 10px 7px 0;
+    /* Một cách khác tạo dấu ba chấm cho chữ quá dài dòng */
+    overflow: hidden;
+    display: block;
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.home-product-item__price {
+    display: flex;
+    margin: 0 0 10px 7px;
+    align-items: baseline;
+}
+
+.home-product-item__price-old {
+    font-size: 1.3rem;
+    text-decoration: line-through;
+    color: #666;
+    margin-right: 10px;
+}
+
+.home-product-item__price-current {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.home-product-item__action {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 7px 10px 7px; 
+}
+
+.home-product-item-action-like {
+    font-size: 1.4rem;
+}
+
+.home-product-item-action-like--liked {
+
+}
+
+.home-product-item-action-like-icon-empty {
+
+}
+
+i.home-product-item-action-like-icon-fill {
+    display: none;
+    color: #f63d30;
+}
+
+.home-product-item-action-like--liked .home-product-item-action-like-icon-fill {
+    display: inline-block;
+}
+
+.home-product-item-action-like--liked .home-product-item-action-like-icon-empty {
+    display: none;
+}
+
+.home-product-item__action-rating {
+    font-size: 1rem;
+    transform: scale(0.9);
+    /* zoom: 1; */
+    transform-origin: right; /* Tâm về bên phải */
+    color: #bdbbbb;
+}
+
+.home-product-item__origin {
+
+}
+
+.home-product-item__brand {
+
+}
+
+.home-product-item__origin-name {
+
+}
+
+.home-product-item__favourite {
+
+}
+
+.home-product-item__sale-off {
+
+}
+
+.home-product-item__sale-off-percent {
+
+}
+
+.home-product-item__sale-off-label {
+
+}
